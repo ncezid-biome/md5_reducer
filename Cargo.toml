@@ -1,0 +1,11 @@
+[package]
+name = "md5_reducer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+md-5 = "0.10.5"
+num-bigint = "0.4"
+num-traits = "0.2"
+num = "0.4"
+clap = { version = "4.0", features = ["derive"] }
