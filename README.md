@@ -28,6 +28,28 @@ Options:
   -V, --version      Print version
 ```
 
+### Example
+
+```bash
+$ ./target/release/md5_reducer --md5 d41d8cd98f00b204e9800998ecf8427e --bits 56
+0       3606500887663242
+```
+
+### API
+
+You can use the function in your own rust projects
+
+```rust
+let md5 = "d41d8cd98f00b204e9800998ecf8427e";
+let max_bits = 56;
+let iterations = 1000000;
+
+let start = std::time::Instant::now();
+for _ in 0..iterations {
+    reduce_md5(md5, max_bits);
+}
+```
+
 ## Benchmark
 
 Run the cargo test to run 1M hashes
